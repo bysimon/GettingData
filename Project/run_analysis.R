@@ -100,7 +100,7 @@ write.table( merged_data_set
              , row.name = FALSE
              , quote = FALSE)  ## add with no quotes
 
-# step 5: generates a new data set with [180 observations = 30 subjects X 6 activities] and 89 variables
+# step 5: generates a new data set with [180 observations = 30 subjects X 6 activities] and 88 variables
 final_data_set <- aggregate( subset( mergedDt , select= -activity_name ) 
                , by = list( mergedDt$activity_name , mergedDt$subject_no ) 
                , FUN = mean )
@@ -115,13 +115,11 @@ getwd()
 fname <- "step5_data_set.txt"
 write.table( final_data_set , file = fname , sep = " ", row.name = FALSE, quote = FALSE)  
 
-
-
 # suggest how the marker should read this data set
-mydata <- read.table( fname , header = TRUE , sep = " " )
-dim(mydata)
-str(mydata)
-summary(mydata)
+#mydata <- read.table( "step5_data_set.txt" , header = TRUE , sep = " " )
+#dim(mydata)
+#str(mydata)
+#summary(mydata)
 
 
 

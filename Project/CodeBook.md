@@ -1,16 +1,22 @@
 ---
-title: "README.md"
-date: January 2015
+title: "CodeBook.md"
+author: "Simone"
+date: "January, 2015"
 output: html_document
 ---
 
 ## Coursera - Getting and Cleaning Data Course 
-### Project Assignment
+### Project Assignment Code Book
 
-This file explains how the run_analysis.R script should work.
+This file describes the variables, the data, and any transformations or work performed to clean up the data.
+
 It assumes you have R and RStudio already installed in your computer and connection to the internet as it may need to download a specific package.
 
-This assignment uses data from <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+- URL where the original data was downloaded:  
+    <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
+
+- This assignment uses data from   
+    <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
 
 
 1) Ensure your local path is set to "~/Project" folder, this is your working directory.  
