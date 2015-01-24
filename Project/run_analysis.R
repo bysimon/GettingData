@@ -92,9 +92,8 @@ stdDt  <- select(totalset , contains("std")  )    ## returns 33 cols
 # concatenate mean and std data frames together = 86 columns + subject + activity
 mergedDt <- cbind(subject_no = totalsub$V1, activity_name = totallbl$activity_name,  meanDt , stdDt )
 
-## if required, generates file with data set of 10299  obs. 90 variables
-merged_data_set <- cbind( totalsub , totallbl , mergedDt )
-write.table( merged_data_set 
+## if required, generates file with data set of 10299  obs. 88 variables
+write.table( mergedDt 
              , file = "step4_merged_data_set.txt" 
              , sep = " "
              , row.name = FALSE
@@ -111,9 +110,7 @@ names(final_data_set)[ names(final_data_set) == 'Group.1'] <- "activity_name"
 final_data_set <- subset(final_data_set , select = -Group.2 )
 
 # generate output with no quotes
-getwd()
-fname <- "step5_data_set.txt"
-write.table( final_data_set , file = fname , sep = " ", row.name = FALSE, quote = FALSE)  
+write.table( final_data_set , file = "step5_data_set.txt"" , sep = " ", row.name = FALSE, quote = FALSE)  
 
 # suggest how the marker should read this data set
 #mydata <- read.table( "step5_data_set.txt" , header = TRUE , sep = " " )
