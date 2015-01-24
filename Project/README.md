@@ -32,7 +32,8 @@ This assignment uses data from <https://d396qusza40orc.cloudfront.net/getdata%2F
   That file contais the average of each variable (86) for each activity (6) for each subject (30).
   
     So you will find 180 rows (6 activities * 30 subjects) and 88 columns (86 variables + 1 subject number + 1 activity name )
-  
+    
+    Please the R code below is the one recommended to read the data files:
 
 ```
         mydata <- read.table( "step5_data_set.txt" , header = TRUE , sep = " " )

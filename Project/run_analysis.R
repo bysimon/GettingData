@@ -69,7 +69,7 @@ feature$V2 <- sub("^f" , "frequency_" , feature$V2)
 
 # make names unique according to R patterns
 feature$V2 <- make.names(feature$V2, unique=TRUE)
-
+ 
 
 #step 1: Merges the training and the test sets to create one data set.
 totalset <- rbind( testset, trainset )          ## data set
