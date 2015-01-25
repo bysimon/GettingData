@@ -109,8 +109,12 @@ names(final_data_set)[ names(final_data_set) == 'Group.1'] <- "activity_name"
 ## drop the extra column created during aggregate
 final_data_set <- subset(final_data_set , select = -Group.2 )
 
-# generate output with no quotes
-write.table( final_data_set , file = "step5_data_set.txt"" , sep = " ", row.name = FALSE, quote = FALSE)  
+# generate text file with list of column names of the final data set
+step5_data_set_names <- colnames(final_data_set)
+write.table( step5_data_set_names , file = "step5_data_set_names.txt", col.name = FALSE , row.name = FALSE, quote = FALSE)
+
+# generate output of final data set from step 5 with no quotes
+write.table( final_data_set , file = "step5_data_set.txt" , sep = " ", row.name = FALSE, quote = FALSE)  
 
 # suggest how the marker should read this data set
 #mydata <- read.table( "step5_data_set.txt" , header = TRUE , sep = " " )
